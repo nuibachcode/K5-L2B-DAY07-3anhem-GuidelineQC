@@ -2,6 +2,7 @@
   {
     "name": "car",
     "color": "#e6194b",
+    "type": "any",
     "attributes": [
       {
         "name": "occluded_level",
@@ -30,13 +31,17 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false",
+          "true"
+        ]
       }
     ]
   },
   {
     "name": "truck",
     "color": "#3cb44b",
+    "type": "any",
     "attributes": [
       {
         "name": "occluded_level",
@@ -65,13 +70,17 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false",
+          "true"
+        ]
       }
     ]
   },
   {
     "name": "van",
     "color": "#4363d8",
+    "type": "any",
     "attributes": [
       {
         "name": "occluded_level",
@@ -100,13 +109,17 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false",
+          "true"
+        ]
       }
     ]
   },
   {
     "name": "bus",
     "color": "#f58231",
+    "type": "any",
     "attributes": [
       {
         "name": "occluded_level",
@@ -135,13 +148,17 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false",
+          "true"
+        ]
       }
     ]
   },
   {
     "name": "tuk_tuk",
     "color": "#911eb4",
+    "type": "any",
     "attributes": [
       {
         "name": "occluded_level",
@@ -170,13 +187,17 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false",
+          "true"
+        ]
       }
     ]
   },
   {
     "name": "motorcycle",
     "color": "#46c8c8",
+    "type": "any",
     "attributes": [
       {
         "name": "occluded_level",
@@ -205,13 +226,17 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false",
+          "true"
+        ]
       }
     ]
   },
   {
     "name": "person",
     "color": "#f032e6",
+    "type": "any",
     "attributes": [
       {
         "name": "occluded_level",
@@ -240,13 +265,17 @@
         "mutable": false,
         "input_type": "checkbox",
         "default_value": "false",
-        "values": []
+        "values": [
+          "false",
+          "true"
+        ]
       }
     ]
   },
   {
     "name": "ignore_region",
     "color": "#808080",
+    "type": "any",
     "attributes": []
   }
 ]

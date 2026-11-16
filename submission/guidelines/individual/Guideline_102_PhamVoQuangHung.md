@@ -35,44 +35,20 @@ can_review	Tick / Không	Tick khi annotator không chắc chắn, cần người
 3. Quy tắc vẽ box
 - Gán box cho tất cả người và phương tiện thực tế thuộc danh sách class.
 - Bounding box phải ôm sát đối tượng, chỉ bao gồm phần thuộc đối tượng.
-
-Không suy đoán hoặc vẽ phần bị che khuất.
-
-
-
-Chọn đúng class và thuộc tính tương ứng.
-
-
-
-Người và phương tiện phải có bounding box riêng, kể cả khi người đang lái hoặc ngồi trên xe.
-
-
-
-Đối tượng bị che khuất vẫn được gán nhãn nếu đủ đặc điểm nhận diện.
-
-
-
-Đối tượng bị cắt bởi biên ảnh vẫn được gán nhãn nếu nhận diện được, chỉ vẽ phần nằm trong ảnh.
-
-
-
-Đối tượng vừa bị che vừa bị cắt phải thiết lập cả occluded_level và truncated=yes.
-
-
-
-Không gán nhãn bóng đổ, hình phản chiếu, hình ảnh trang trí hoặc vật thể không thuộc danh sách class.
-
-
-
-Đối tượng quá nhỏ hoặc quá xa, không đủ khả năng nhận diện thì không gán nhãn.
- - Đối tượng bị che khuất bởi hàng rào, rào chắn hoặc vật cản vẫn được gán nhãn nếu có đủ đặc điểm nhận diện. Chỉ vẽ box phần đối tượng nhìn thấy, không suy đoán phần bị che.
-
+- Không suy đoán hoặc vẽ phần bị che khuất.
+- Chọn đúng class và thuộc tính tương ứng.
+- Người và phương tiện phải có bounding box riêng, kể cả khi người đang lái hoặc ngồi trên xe.
+- Đối tượng bị che khuất vẫn được gán nhãn nếu đủ đặc điểm nhận diện.
+- Đối tượng bị cắt bởi biên ảnh vẫn được gán nhãn nếu nhận diện được, chỉ vẽ phần nằm trong ảnh.
+- Đối tượng vừa bị che vừa bị cắt phải thiết lập cả occluded_level và truncated=yes.
+- Không gán nhãn bóng đổ, hình phản chiếu, hình ảnh trang trí hoặc vật thể không thuộc danh sách class.
+- Đối tượng quá nhỏ hoặc quá xa, không đủ khả năng nhận diện thì không gán nhãn.
+- Đối tượng bị che khuất bởi hàng rào, rào chắn hoặc vật cản vẫn được gán nhãn nếu có đủ đặc điểm nhận diện. Chỉ vẽ box phần đối tượng nhìn thấy, không suy đoán phần bị che.
 - Đối với phương tiện có vật thể hoặc hàng hóa đặt trên xe, chỉ gán nhãn phương tiện thuộc danh sách class. Không gán nhãn riêng hàng hóa nếu hàng hóa không thuộc danh sách lớp.
-
 - Không gán nhãn đồ chơi, mô hình ô tô hoặc phương tiện mô phỏng nếu mục tiêu dataset là nhận diện phương tiện giao thông thực tế.
-
 - Không gán nhãn hình vẽ, hình in, hình quảng cáo hoặc hình ảnh phương tiện xuất hiện trên biển hiệu, poster, màn hình và các vật dụng trang trí.
-4. Ca khó (bổ sung)
+
+4. Ca khó
 4.1. Xe phía sau hàng rào, rào chắn: Xe máy, ô tô hoặc người nằm phía sau hàng rào vẫn được gán nhãn nếu nhận diện được đối tượng. Vẽ box theo phần nhìn thấy, không vẽ bao gồm hàng rào. Nếu hàng rào che khuất nhiều nhưng vẫn xác định được loại phương tiện thì vẫn gán nhãn và chọn occluded_level phù hợp. Nếu không thể xác định đối tượng thì bỏ qua hoặc đánh dấu can_review.
 
 4.2. Xe nhìn qua kính: Phương tiện thật nhìn thấy qua cửa kính, kính cửa sổ hoặc kính chắn gió vẫn được gán nhãn nếu nhận diện được. Trường hợp chỉ nhìn thấy hình phản chiếu của xe trên kính thì không gán nhãn. Nếu kính bị mờ, tối hoặc phản sáng khiến không xác định được phương tiện thì đánh dấu can_review.
@@ -93,7 +69,7 @@ Không gán nhãn bóng đổ, hình phản chiếu, hình ảnh trang trí ho�
 
 4.10. Đối tượng quá nhỏ hoặc ở xa: Nếu đối tượng quá nhỏ, không đủ đặc điểm để xác định class thì không gán nhãn. Đề xuất thử nghiệm ngưỡng 8–10 px chiều cao box trên ảnh gốc trước khi chốt ngưỡng chính thức.
 
-5. QC và phiên bản (bổ sung)
+5. QC và phiên bản
 - Kiểm tra không bỏ sót người và phương tiện thực tế.
 - Không gán nhãn mô hình, đồ chơi, tượng hoặc hình ảnh trên biển quảng cáo.
 - Không gán nhãn hàng hóa, vật dụng trên xe.
