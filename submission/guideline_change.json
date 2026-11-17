@@ -1,0 +1,4 @@
+{
+  "kind": "semantic",
+  "summary": "Bản v1.1 làm rõ cách tính occluded_level; sửa ví dụ img_011.jpg là người thật và tham chiếu bus tới Taxonomy §2.1; đồng thời giải quyết mâu thuẫn pickup bằng quy tắc R-08: pickup thông thường luôn là car dù chở hàng, còn truck dành cho kết cấu chở hàng chuyên dụng tách biệt rõ với cabin. Cập nhật taxonomy v1.1, giữ nguyên tập lớp, thuộc tính và mục rules; kiểm lại cả lô theo R-08."
+}
